@@ -1,9 +1,10 @@
 const repeatString = function(text, num) {
     let outText = '';
-    for(let i = 0; i<num; i++)
-    {
-        outText = outText.concat(text);
-    }
+    if(num == -1)
+        return 'ERROR';
+    else
+        for(let i = 0; i<num; i++)
+            outText = outText.concat(text);
 
     return outText;
 };
