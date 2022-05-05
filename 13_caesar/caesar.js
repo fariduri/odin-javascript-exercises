@@ -3,9 +3,17 @@ const caesar = function(string, shift) {
 
     function encodeToCeaser (unicode, shift)
     {
-        let shifted = unicode + shift;
-        shifted -= ((unicode > 64 && unicode <= 90 && shifted > 90) || (unicode > 96 && unicode <= 122 && shifted > 122)) ? 25: 0;        
-        let encodedChar = String.fromCharCode(shifted);
+        let encodedChar;
+        if ((unicode > 64 && unicode <= 90) || (unicode > 96 && unicode <= 122 ))
+        {
+            let shifted = unicode + shift;
+            if ((unicode <= 90 && shifted > 90) || (unicode <= 122 && shifted > 122))
+                shifted -= 26;
+            
+            encodedChar = String.fromCharCode(shifted);
+        }
+        else
+            encodedChar = String.fromCharCode(unicode);
 
         return encodedChar;
     }
