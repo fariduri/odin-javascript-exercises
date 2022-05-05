@@ -2,8 +2,11 @@ const fibonacci = function(num) {
     let fn = 1;
     let fn_1 = 1;
     let fn_2 = 0;
-
-    if(num == 0)
+    num = Number(num);
+    
+    if (num < 0)
+      return 'OOPS';
+    else if(num == 0)
         return 0;
     else if(num == 1)
         return 1;
