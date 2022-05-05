@@ -30,8 +30,18 @@ const power = function(num, power) {
   return result;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+	let result = 1
+  if (num == 0)
+    return result;
+  else
+  {
+    for (let i = 1; i <= num; i++)
+    {
+      result = multiply([result, i]);
+    }
+    return result;
+  }
 };
 
 // Do not edit below this line
