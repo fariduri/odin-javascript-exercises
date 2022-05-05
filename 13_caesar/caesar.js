@@ -4,7 +4,7 @@ const caesar = function(string, shift) {
     function encodeToCeaser (unicode, shift)
     {
         let shifted = unicode + shift;
-        shifted -= (shifted > 90) ? 25 : 0;
+        shifted -= ((unicode > 64 && unicode <= 90 && shifted > 90) || (unicode > 96 && unicode <= 122 && shifted > 122)) ? 25: 0;        
         let encodedChar = String.fromCharCode(shifted);
 
         return encodedChar;
