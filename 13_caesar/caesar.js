@@ -9,6 +9,8 @@ const caesar = function(string, shift) {
             let shifted = unicode + shift;
             if ((unicode <= 90 && shifted > 90) || (unicode <= 122 && shifted > 122))
                 shifted -= 26;
+            else if ((unicode > 64 && shifted < 64) || (unicode > 96 && shifted < 96))
+                shifted += 26;
             
             encodedChar = String.fromCharCode(shifted);
         }
