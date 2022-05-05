@@ -1,7 +1,6 @@
 const palindromes = function (text) {
     let cleanText = text.toUpperCase();
-    cleanText = cleanText.replace(/[/s.!,&]/g, '');
-
+    cleanText = cleanText.replace(/[\s.!,&]/g, '');
     let reversedCleanText = reverseString(cleanText);
     
     return reversedCleanText == cleanText;
