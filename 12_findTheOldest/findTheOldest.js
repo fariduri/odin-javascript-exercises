@@ -5,7 +5,7 @@ const findTheOldest = function(people) {
 
     function countAge (person)
     {
-        return (person.yearOfDeath != undefined) ? person.yearOfDeath - person.yearOfBirth: -10;
+        return (person.yearOfDeath != undefined) ? person.yearOfDeath - person.yearOfBirth: 2022 - person.yearOfBirth;
     }
 
     for (let person of people)
