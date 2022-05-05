@@ -11,7 +11,7 @@ const sum = function(numbers) {
   for (let num of numbers)
     total += num;
   
-    return total;
+  return total;
 };
 
 const multiply = function(numbers) {
@@ -22,8 +22,12 @@ const multiply = function(numbers) {
   return total;
 };
 
-const power = function() {
-	
+const power = function(num, power) {
+	let result = 1;
+  for (let count = 0; count < power; count++)
+    result *= num;
+
+  return result;
 };
 
 const factorial = function() {
